@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Зарегся чтоб читать новости</h2>
+
+
+@using (Html.BeginForm("Reg", "User", FormMethod.Post))
+{
+    <p>Введите свое имя </p>
+    <input type="text" name="login" />
+    <p>Введите пароль :</p>
+    <input type="password" name="password" />
+    <p>Введите номер телефона </p>
+    <input type="text" name="phoneNumber" />
+    <input type="submit" value="Зарегиться" />
+}
+
+@Html.ActionLink("Войти", "Auth")
